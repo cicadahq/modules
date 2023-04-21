@@ -16,14 +16,12 @@ jobs:
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-      - name: Fmt Lint Deno Module
+      - name: Deno Fmt
         run: deno fmt --check
-      - name: Lint Deno Module
+      - name: Deno Lint
         run: deno lint
-      - name: Check Deno Module
-        shell: bash
-        run: |
-          deno check **/*.ts
+      - name: Deno Check
+        run: find . -name "*.ts" -type f -print0 | xargs -0 -n1 deno check
 
   typos:
     name: Spell Check with Typos
