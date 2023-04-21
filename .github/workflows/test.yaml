@@ -8,6 +8,7 @@ on:
 
 jobs:
   test-deno:
+    name: Test Deno
     runs-on: ubuntu-latest
     steps:
       - name: Git Checkout
@@ -21,7 +22,8 @@ jobs:
         run: deno lint
       - name: Check Deno Module
         shell: bash
-        run: deno check **/*.ts
+        run: |
+          deno check **/*.ts
 
   typos:
     name: Spell Check with Typos
