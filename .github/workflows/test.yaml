@@ -20,6 +20,7 @@ jobs:
       - name: Lint Deno Module
         run: deno lint
       - name: Check Deno Module
+        shell: bash
         run: deno check **/*.ts
 
   typos:
