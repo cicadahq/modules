@@ -1,3 +1,3 @@
-import { install } from "./install.ts";
+import { aws } from "../install/mod.ts";
 
-export { install };
+export { aws as install };

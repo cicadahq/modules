@@ -1,3 +1,3 @@
-import { install } from "./install.ts";
+import { github } from "../install/mod.ts";
 
-export { install };
+export { github as install };

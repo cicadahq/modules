@@ -1,4 +1,4 @@
 import { installDependencies } from "./installDependencies.ts";
-import { install } from "./install.ts";
+import { node } from "../install/mod.ts";
 
-export { install, installDependencies };
+export { installDependencies, node as install };
